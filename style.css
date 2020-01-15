@@ -1,0 +1,23 @@
+html, body, div {
+  font-family: arial,sans-serif;
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  height: 500px;
+  width: 500px;
+}
+
+div {
+  text-align: center;
+  border-style: solid;
+  border-color: #6e6e6e;
+  border-width: 1px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
