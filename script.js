@@ -14,12 +14,20 @@ function createGrid(lateralSize){
   }
   const box = document.querySelectorAll('div.content');
   box.forEach((box) => {
-    box.addEventListener('mousedown', changeColor);
+    box.addEventListener('mouseover', changeColor);
   });
   let changeLight = 0;
+  let decreasingLigth = 0;
   function changeColor(e) {
     e.target.style.background = "rgb(" + defaultRandomColor(changeLight,changeLight,changeLight) + ")";
-    changeLight ++;
+    if ((changeLight < 255 && decreasingLigth == 0) || changeLight == 0){
+      changeLight ++;
+      decreasingLigth = 0;
+    } else {
+      changeLight --;
+      decreasingLigth = 1;
+    }
+    console.log(changeLight);
   }
 }
 
